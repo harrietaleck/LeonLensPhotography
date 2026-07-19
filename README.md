@@ -2,7 +2,8 @@
 
 Professional photography website for **Leon Lens** — portfolio gallery, client booking, and admin dashboard.
 
-**Live repo:** [github.com/harrietaleck/LeonLensPhotography](https://github.com/harrietaleck/LeonLensPhotography)
+**Live site:** [leon-lens-photography.harrietmaleck.workers.dev](https://leon-lens-photography.harrietmaleck.workers.dev)  
+**GitHub:** [github.com/harrietaleck/LeonLensPhotography](https://github.com/harrietaleck/LeonLensPhotography)
 
 ## Features
 
@@ -56,6 +57,14 @@ Then open [http://localhost:3000](http://localhost:3000)
 npm run build
 npm start
 ```
+
+### Deploy to Cloudflare
+
+```bash
+npm run deploy
+```
+
+This builds with OpenNext and deploys to Cloudflare Workers. Bookings are stored in Cloudflare KV.
 
 ## Project structure
 
