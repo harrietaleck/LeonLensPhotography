@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-gold-400 text-black;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-8 py-3 bg-gold-400 text-black font-semibold tracking-wider uppercase text-sm hover:bg-gold-500 transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-3 border border-white text-white font-semibold tracking-wider uppercase text-sm hover:bg-white hover:text-black transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-light tracking-widest uppercase text-white;
+  }
+
+  .section-subtitle {
+    @apply text-gold-400 text-sm tracking-[0.3em] uppercase font-medium;
+  }
+
+  .input-field {
+    @apply w-full bg-zinc-900 border border-zinc-700 text-white px-4 py-3 focus:outline-none focus:border-gold-400 transition-colors duration-200 placeholder:text-zinc-500;
+  }
+
+  .label {
+    @apply block text-sm tracking-widest uppercase text-zinc-400 mb-2;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 0px;
+}
+
+/* Loader animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
