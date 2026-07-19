@@ -39,3 +39,6 @@ next-env.d.ts
 
 # local booking data
 /data/bookings.json
+
+# local auth helpers
+.gh-auth*
